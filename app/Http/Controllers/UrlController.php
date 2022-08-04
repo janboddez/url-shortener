@@ -49,6 +49,12 @@ class UrlController extends Controller
 
         $url = $request->input('url');
 
+        if (! is_string($url)) {
+            abort(400);
+        }
+
+        $url = rawurldecode($url);
+
         if (! filter_var($url, FILTER_VALIDATE_URL)) {
             abort(400);
         }
