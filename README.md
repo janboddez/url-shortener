@@ -7,7 +7,7 @@ Creating a shortened URL is done by sending a POST request to https://example.or
 ```
 curl -X POST https://example.org/shorten?url=https://some.url/and-so-on
 ```
-If the URL in question contains special characters, a query string, etc., better make sure it is run to, e.g., PHP's `rawurlencode()` first.
+If the URL in question contains special characters, a query string, etc., better make sure it is run through, e.g., PHP's `rawurlencode()` first.
 
 If all goes well, the resulting short URL is returned in plain text.
 
