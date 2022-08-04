@@ -82,6 +82,7 @@ class UrlController extends Controller
 
         $shortenedUrl = url($this->hashids->encode($id));
 
-        return response()->json($shortenedUrl);
+        return response($shortenedUrl, 200)
+            ->header('Content-Type', 'text/plain');
     }
 }
