@@ -31,7 +31,7 @@ class UrlController extends Controller
             ->where('id', $id[0])
             ->value('url');
 
-        if ($url === null) {
+        if (! $url) {
             abort(404);
         }
 
