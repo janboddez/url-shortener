@@ -1,7 +1,7 @@
 # URL Shortener
 Simple URL shortening.
 
-Beside the usual (`.env`, etc.), also adapt `config\allowlist.php`.
+Beside the usual (`.env`, etc.), also adapt `config/allowlist.php`.
 
 Creating a shortened URL is done by sending a POST request to https://example.org/shorten, like so:
 ```
