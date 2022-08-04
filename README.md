@@ -10,4 +10,4 @@ curl -X POST https://example.org/shorten?url=https://some.url/and-so-on
 
 If all goes well, the resulting short URL is returned in plain text.
 
-Might later on add rate limiting or an IP-based allowlist, but for now, this is it.
+Might later on add rate limiting or an IP-based allowlist (or support for query strings!), but for now, this is it.
