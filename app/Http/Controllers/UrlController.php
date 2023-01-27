@@ -43,8 +43,8 @@ class UrlController extends Controller
      */
     public function post(Request $request)
     {
-        if (! $request->filled('url')) {
-            abort(400);
+        if ($request->bearerToken() !== config('allowlist.token')) {
+            abort(401);
         }
 
         $url = $request->input('url');
